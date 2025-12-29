@@ -1,0 +1,294 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "connections": "Connections",
+    "location": "Ankara, Turkey",
+    "role": "Flutter Developer & Software Engineer",
+    "rights": "© {{year}} Deniz Kantar. All rights reserved."
+  },
+  "home": {
+    "titleLines": ["Hello,", "I am Deniz Kantar"],
+    "nameText": "Deniz Kantar",
+    "role": "Flutter & Web Developer",
+    "description": "With 2+ years of experience, I publish, scale, and maintain production-grade iOS/Android apps with Flutter. I build consistent interfaces with React and modern web tech, delivering solutions aligned with user needs and business goals through clean architecture, test-driven development, and performance optimization.",
+    "ctaPrimary": "View My Projects",
+    "ctaSecondary": "Contact Me",
+    "stats": [
+      { "number": "2+", "label": "Years Experience" },
+      { "number": "5+", "label": "Completed Projects" },
+      { "number": "3", "label": "Company Experience" },
+      { "number": "10+", "label": "Technologies" }
+    ],
+    "skillsTitle": "My Expertise",
+    "skillsSubtitle": "Technologies and skills I work with",
+    "skills": [
+      {
+        "title": "Mobile Development",
+        "description": "Production-grade Flutter apps on App Store and Google Play with push notifications, offline-first flows, and performance optimizations",
+        "color": "from-blue-500 to-cyan-500"
+      },
+      {
+        "title": "Frontend Development",
+        "description": "Responsive, SEO-friendly React.js web apps and dashboards with reusable components, state management, and accessibility focus",
+        "color": "from-purple-500 to-pink-500"
+      },
+      {
+        "title": "Cloud & Backend",
+        "description": "Firebase & GCP integrations (auth, storage, functions, realtime DB) and Node.js services for end-to-end delivery",
+        "color": "from-orange-500 to-red-500"
+      }
+    ],
+    "ctaSectionTitle": "Thinking About a Project?",
+    "ctaSectionText": "Let’s build your dream mobile or web application together!",
+    "ctaSectionButton": "Contact Now"
+  },
+  "about": {
+    "heroTitle": "About Me",
+    "heroDescription": "As a Flutter Developer with 2 years of experience, I build production-ready mobile apps for iOS and Android. I design performant, user-centric solutions with clean architecture and modern practices.",
+    "educationTitle": "Education",
+    "education": [
+      { "degree": "MSc Computer Engineering", "school": "Çankaya University", "period": "2025 - Present" },
+      { "degree": "BSc Electrical & Electronics Engineering", "school": "Çankaya University", "period": "2018 - 2023", "grade": "Final Grade: 3.11" },
+      { "degree": "High School", "school": "Ankara High School (Anatolian)", "period": "2014 - 2018" }
+    ],
+    "skillsTitle": "Technical Skills",
+    "skills": {
+      "Mobile Development": ["Flutter (Dart)", "State Management (BLoC, Provider)", "Theming & Localization", "iOS & Android"],
+      "Backend & Cloud": ["Firebase (Auth, Firestore, Cloud Functions)", "Google Cloud Platform", "Realtime Database", "Cloud Storage"],
+      "Frontend": ["React.js", "Next.js", "HTML & CSS", "JavaScript", "Responsive Design"],
+      "Programming Languages": ["C/C++/C#", "Python", "Dart", "JavaScript"],
+      "Tools & Others": ["Git & GitHub", "Figma", "Arduino", "Microsoft Office", "Redux"]
+    },
+    "languagesTitle": "Languages",
+    "languages": [
+      { "name": "English", "level": "B2", "percentage": 75 },
+      { "name": "Spanish", "level": "A2", "percentage": 40 },
+      { "name": "Turkish", "level": "Native", "percentage": 100 }
+    ],
+    "achievementsTitle": "Awards & Certificates",
+    "achievements": [
+      { "title": "Third Place", "organization": "Çankaya University R&D Project Market", "description": "Home Automation System - 15th R&D Project Market" },
+      { "title": "Ottonom Engineering Academy", "organization": "Certificate of Participation", "description": "Industrial Automation & Automotive Electronics Training" }
+    ],
+    "hobbiesTitle": "Hobbies",
+    "hobbies": [
+      { "title": "Latin Dance", "description": "Salsa instructor at La Dance Academy since 2021. Teaching and coaching at level 1.", "icon": "💃" },
+      { "title": "Music", "description": "Playing bağlama and guitar with a MoNE-approved certificate. I also give private lessons.", "icon": "🎸" }
+    ]
+  },
+  "experience": {
+    "heroTitle": "My Experience",
+    "heroDescription": "Experiences and projects I have contributed to throughout my career",
+    "professionalTitle": "Professional Experience",
+    "internshipTitle": "Internships",
+    "linksLabel": "Links:",
+    "appsLabel": "Published Apps:",
+    "visitWebsite": "Visit Website",
+    "experiences": [
+      {
+        "title": "Mobile & Frontend Developer",
+        "company": "Korsis Bilisim Technology",
+        "location": "Ankara, Turkey",
+        "period": "07/2024 - 09/2025",
+        "type": "Full-time",
+        "description": [
+          "Developed and published Park24; managed releases, updates, and maintenance end-to-end.",
+          "Built scalable mobile apps with Flutter (Provider) and Firebase (Firestore, Realtime DB, Auth, Cloud Functions, Cloud Storage).",
+          "Integrated backend services on Google Cloud Platform (GCP), including serverless solutions.",
+          "Implemented OneSignal push notifications to increase engagement with targeted and scheduled campaigns.",
+          "Designed and refined UI/UX with Figma, creating prototypes, wireframes, and user flows for web and mobile.",
+          "Developed React.js web apps (Park24 site, OBSOLIX dashboard) while leading the frontend team."
+        ],
+        "links": [
+          { "name": "Company Website", "url": "https://www.korsisteknoloji.com/" },
+          { "name": "Park24", "url": "https://park24.org/" },
+          { "name": "OBSOLIX", "url": "https://obsolix.com/" }
+        ],
+        "apps": ["AnkaTur", "Park24 (App Store and Google Play Store)"],
+        "color": "from-blue-500 to-cyan-500"
+      },
+      {
+        "title": "Mobile Application Developer",
+        "company": "Pepteam Bilisim Inc.",
+        "location": "Remote",
+        "period": "04/2024 - 07/2024",
+        "type": "Full-time",
+        "description": [
+          "Contributed to Flutter-based iOS and Android projects.",
+          "Improved user flows by supporting design reviews and providing developer feedback.",
+          "Enabled offline-first support by integrating Firebase with Hive.",
+          "Performed functional and usability testing to ensure stability before release."
+        ],
+        "links": [{ "name": "Company Website", "url": "https://pepteam.com.tr/" }],
+        "apps": ["Pepteam", "Parently", "Yuppy"],
+        "color": "from-purple-500 to-pink-500"
+      },
+      {
+        "title": "Mobile Application Developer",
+        "company": "Map2heal Information Technologies and Software Inc.",
+        "location": "Remote",
+        "period": "10/2023 - 04/2024",
+        "type": "Full-time",
+        "description": [
+          "Contributed to the Flutter-based Remote Patient Monitoring System (Dakik).",
+          "Validated features for healthcare compliance and fixed issues.",
+          "Enhanced accessibility with user-centric features."
+        ],
+        "links": [{ "name": "Dakik Website", "url": "https://dakik.app" }],
+        "apps": ["Remote Patient Monitoring Systems (Dakik)"],
+        "color": "from-green-500 to-teal-500"
+      }
+    ],
+    "internships": [
+      {
+        "title": "Intern Programmer",
+        "company": "TURKISH AEROSPACE INDUSTRIES (TAI)",
+        "period": "06/2022 - 07/2022",
+        "description": [
+          "Researched OSI layers and UDP.",
+          "Learned basic C# with Visual Studio.",
+          "Built UDP socket programming in C#.",
+          "Created a GUI and integrated it with sockets."
+        ],
+        "website": "https://www.tusas.com/",
+        "color": "from-red-500 to-orange-500"
+      },
+      {
+        "title": "Intern Programmer",
+        "company": "LINKAS TECHNOLOGY INC.",
+        "period": "06/2021 - 07/2021",
+        "description": [
+          "Developed C algorithms using UML charts.",
+          "Reviewed CAN bus parameters from Excel.",
+          "Researched CAN bus and LIN bus.",
+          "Studied LIN parameters for MCU and ran code on the electric construction machine."
+        ],
+        "website": "https://www.linkas.com.tr/",
+        "color": "from-yellow-500 to-orange-500"
+      }
+    ]
+  },
+  "projects": {
+    "heroTitle": "My Projects",
+    "heroSubtitle": "Mobile apps, web projects, and IoT systems I’ve worked on",
+    "featuredTitle": "Featured Projects",
+    "otherTitle": "Other Projects",
+    "techLabel": "Technologies:",
+    "viewProject": "View Project",
+    "categories": [
+      { "key": "All", "label": "All" },
+      { "key": "Mobile App", "label": "Mobile App" },
+      { "key": "Web App", "label": "Web App" },
+      { "key": "IoT Project", "label": "IoT Project" }
+    ],
+    "ctaTitle": "More Projects on GitHub",
+    "ctaDescription": "Visit my GitHub profile for more open-source work and code samples",
+    "profiles": [
+      { "label": "denizkant", "url": "https://github.com/denizkant" },
+      { "label": "denizzkantarr", "url": "https://github.com/denizzkantarr" }
+    ],
+    "projects": [
+      {
+        "title": "Park24",
+        "category": "Mobile App",
+        "description": "Comprehensive parking management mobile application. Independently managed release, updates, and maintenance. Built with Flutter and Firebase ecosystem.",
+        "technologies": ["Flutter", "Firebase", "Google Cloud Platform", "OneSignal", "Provider"],
+        "image": "📱",
+        "links": [{ "type": "website", "url": "https://park24.org/" }],
+        "color": "from-blue-500 to-cyan-500",
+        "featured": true
+      },
+      {
+        "title": "OBSOLIX",
+        "category": "Web App",
+        "description": "Cybersecurity product dashboard developed with React.js. Led the frontend team and managed development processes.",
+        "technologies": ["React.js", "JavaScript", "Tailwind CSS", "REST API"],
+        "image": "🔐",
+        "links": [{ "type": "website", "url": "https://obsolix.com/" }],
+        "color": "from-purple-500 to-pink-500",
+        "featured": true
+      },
+      {
+        "title": "AnkaTur",
+        "category": "Mobile App",
+        "description": "Mobile application for tourism and transportation services. Developed with Flutter and integrated with backend services.",
+        "technologies": ["Flutter", "Firebase", "Google Maps API", "BLoC"],
+        "image": "🚌",
+        "links": [],
+        "color": "from-green-500 to-teal-500",
+        "featured": false
+      },
+      {
+        "title": "Dakik - Remote Patient Monitoring",
+        "category": "Mobile App",
+        "description": "Healthcare app for patient follow-ups. Ensured compliance with healthcare standards and enhanced accessibility.",
+        "technologies": ["Flutter", "Firebase", "Healthcare APIs", "Provider"],
+        "image": "🏥",
+        "links": [{ "type": "website", "url": "https://dakik.app" }],
+        "color": "from-red-500 to-orange-500",
+        "featured": true
+      },
+      {
+        "title": "Pepteam, Parently, Yuppy",
+        "category": "Mobile App",
+        "description": "Multiple iOS and Android mobile app projects. Enhanced user flows and enabled offline-first data support.",
+        "technologies": ["Flutter", "Firebase", "Hive", "BLoC"],
+        "image": "📲",
+        "links": [{ "type": "website", "url": "https://pepteam.com.tr/" }],
+        "color": "from-yellow-500 to-orange-500",
+        "featured": false
+      },
+      {
+        "title": "Home Automation System (IoT)",
+        "category": "IoT Project",
+        "description": "Smart home system using ESP8266 microcontroller. Won 3rd place in Çankaya University R&D Project Market. Features gas and temperature sensors, LCD interface, and remote access.",
+        "technologies": ["C++", "ESP8266", "Arduino", "Blynk", "IoT"],
+        "image": "🏠",
+        "links": [],
+        "color": "from-indigo-500 to-purple-500",
+        "featured": true
+      },
+      {
+        "title": "Elkin Turizm Website",
+        "category": "Web App",
+        "description": "Corporate tourism website with modern UI, responsive design, and fast content access.",
+        "technologies": ["React.js", "Tailwind CSS", "SEO", "Responsive UI"],
+        "image": "🧭",
+        "links": [{ "type": "website", "url": "https://elkin.com.tr/" }],
+        "color": "from-blue-600 to-teal-500",
+        "featured": false
+      }
+    ]
+  },
+  "contact": {
+    "heroTitle": "Get in Touch",
+    "heroDescription": "Feel free to reach out for your projects or collaboration opportunities!",
+    "contactInfo": [
+      { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-red-500 to-pink-500" },
+      { "title": "Phone", "value": "+90 534 010 2240", "link": "tel:+905340102240", "color": "from-green-500 to-teal-500" },
+      { "title": "Location", "value": "Ankara, Turkey", "link": "https://www.google.com/maps/place/Ankara", "color": "from-blue-500 to-cyan-500" }
+    ],
+    "aboutTitle": "Let’s Work Together!",
+    "aboutText": "If you need professional solutions for mobile development, web projects, or IoT systems, you’re in the right place. I can bring your projects to life with Flutter, React.js, and modern technologies.",
+    "aboutBullets": ["2+ years professional experience", "Production-ready applications", "Clean code & best practices"],
+    "socialTitle": "Social Media",
+    "socialView": "View Profile",
+    "availabilityTitle": "Availability",
+    "availabilityStatus": "Open for new projects",
+    "availabilityText": "I’m available for freelance projects and part-time collaborations. Let’s discuss your project!"
+  }
+}
+

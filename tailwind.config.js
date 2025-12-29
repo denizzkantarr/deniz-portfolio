@@ -4,6 +4,12 @@ module.exports = {
     './public/index.html',
     './src/**/*.{js,jsx,ts,tsx}',
   ],
+  safelist: [
+    {
+      pattern: /^(from|to)-(blue|purple|pink|red|orange|yellow|amber|green|emerald|teal|cyan|indigo|violet|fuchsia|rose|gray|slate)-[0-9]{2,3}$/,
+    },
+    { pattern: /^(from|to)-(primary|secondary|dark|light)$/ },
+  ],
   theme: {
     extend: {
       colors: {

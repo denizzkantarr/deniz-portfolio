@@ -2,97 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendar, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
 import PageTransition from '../components/PageTransition';
+import { useTranslation } from 'react-i18next';
 
 const Experience = () => {
-  const experiences = [
-    {
-      title: 'Mobile & Frontend Developer',
-      company: 'Korsis Bilisim Technology',
-      location: 'Ankara, Turkey',
-      period: '07/2024 - 09/2025',
-      type: 'Full-time',
-      description: [
-        'Developed and published Park24, independently managing release, updates, and maintenance.',
-        'Built scalable mobile applications using Flutter (Provider) and Firebase ecosystem (Firestore, Realtime Database, Auth, Cloud Functions, Cloud Storage).',
-        'Integrated backend services on Google Cloud Platform (GCP), including serverless solutions.',
-        'Implemented push notifications with OneSignal, increasing user engagement through targeted and scheduled campaigns.',
-        'Designed and refined UI/UX with Figma, creating interactive prototypes, wireframes, and user flows for both web and mobile.',
-        'Developed web applications with React.js, including the Park24 website and the cybersecurity product dashboard of the project OBSOLIX, while also leading the frontend team and managing development processes.',
-      ],
-      links: [
-        { name: 'Company Website', url: 'https://www.korsisteknoloji.com/' },
-        { name: 'Park24', url: 'https://park24.org/' },
-        { name: 'OBSOLIX', url: 'https://obsolix.com/' },
-      ],
-      apps: ['AnkaTur', 'Park24 (App Store and Google Play Store)'],
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      title: 'Mobile Application Developer',
-      company: 'Pepteam Bilisim Inc.',
-      location: 'Remote',
-      period: '04/2024 - 07/2024',
-      type: 'Full-time',
-      description: [
-        'Contributed to iOS and Android mobile app projects built with Flutter.',
-        'Enhanced user flows by supporting design reviews and providing developer feedback.',
-        'Enabled offline-first data support by integrating Firebase with Hive.',
-        'Performed functional and usability testing, ensuring app stability and performance before release.',
-      ],
-      links: [
-        { name: 'Company Website', url: 'https://pepteam.com.tr/' },
-      ],
-      apps: ['Pepteam', 'Parently', 'Yuppy'],
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      title: 'Mobile Application Developer',
-      company: 'Map2heal Information Technologies and Software Inc.',
-      location: 'Remote',
-      period: '10/2023 - 04/2024',
-      type: 'Full-time',
-      description: [
-        'Contributed to the Remote Patient Monitoring System (Dakik), a Flutter-based healthcare app for patient follow-ups.',
-        'Ensured compliance with healthcare standards by validating features and debugging issues.',
-        'Collaborated with cross-functional teams to deliver user-centric features, enhancing accessibility and patient engagement.',
-      ],
-      links: [
-        { name: 'Dakik Website', url: 'https://dakik.app' },
-      ],
-      apps: ['Remote Patient Monitoring Systems (Dakik)'],
-      color: 'from-green-500 to-teal-500',
-    },
-  ];
+  const { t } = useTranslation();
 
-  const internships = [
-    {
-      title: 'Intern Programmer',
-      company: 'TURKISH AEROSPACE INDUSTRIES (TAI)',
-      period: '06/2022 - 07/2022',
-      description: [
-        'Researched OSI Layers and UDP',
-        'Learned basic C# with Visual Studio',
-        'Socket Programmed with UDP using C#',
-        'Created GUI and integrated it with Sockets',
-      ],
-      website: 'https://www.tusas.com/',
-      color: 'from-red-500 to-orange-500',
-    },
-    {
-      title: 'Intern Programmer',
-      company: 'LINKAS TECHNOLOGY INC.',
-      period: '06/2021 - 07/2021',
-      description: [
-        'Worked C code algorithms with UML charts.',
-        'Examined parameters for CAN bus from Excel.',
-        'Researched CAN bus and LIN bus.',
-        'Studied LIN bus parameters for MCU (Motor Control Unit).',
-        'Wrote a C code using parameters, and ran it on the electric construction machine.',
-      ],
-      website: 'https://www.linkas.com.tr/',
-      color: 'from-yellow-500 to-orange-500',
-    },
-  ];
+  const experiences = t('experience.experiences', { returnObjects: true }) || [];
+  const internships = t('experience.internships', { returnObjects: true }) || [];
 
   return (
     <PageTransition>
@@ -105,10 +21,10 @@ const Experience = () => {
               animate={{ opacity: 1, y: 0 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                İş Deneyimlerim
+                {t('experience.heroTitle')}
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Profesyonel kariyerim boyunca edindiğim deneyimler ve katkıda bulunduğum projeler
+                {t('experience.heroDescription')}
               </p>
             </motion.div>
           </div>
@@ -124,7 +40,7 @@ const Experience = () => {
               className="text-4xl font-bold text-gray-800 mb-12 flex items-center"
             >
               <FaBriefcase className="mr-3 text-primary" />
-              Profesyonel Deneyimler
+              {t('experience.professionalTitle')}
             </motion.h2>
 
             <div className="space-y-8">
@@ -172,7 +88,7 @@ const Experience = () => {
                     {/* Links */}
                     {exp.links && exp.links.length > 0 && (
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">Links:</h4>
+                        <h4 className="font-semibold text-gray-800 mb-2">{t('experience.linksLabel')}</h4>
                         <div className="flex flex-wrap gap-3">
                           {exp.links.map((link, idx) => (
                             <a
@@ -193,7 +109,7 @@ const Experience = () => {
                     {/* Apps */}
                     {exp.apps && exp.apps.length > 0 && (
                       <div>
-                        <h4 className="font-semibold text-gray-800 mb-2">Published Apps:</h4>
+                        <h4 className="font-semibold text-gray-800 mb-2">{t('experience.appsLabel')}</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.apps.map((app, idx) => (
                             <span
@@ -223,7 +139,7 @@ const Experience = () => {
               className="text-4xl font-bold text-gray-800 mb-12 flex items-center"
             >
               <FaBriefcase className="mr-3 text-primary" />
-              Staj Deneyimleri
+              {t('experience.internshipTitle')}
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -265,7 +181,7 @@ const Experience = () => {
                     className="text-primary hover:text-secondary transition-colors flex items-center gap-1 text-sm"
                   >
                     <FaExternalLinkAlt />
-                    Visit Website
+                    {t('experience.visitWebsite')}
                   </a>
                 </motion.div>
               ))}
@@ -273,32 +189,6 @@ const Experience = () => {
           </div>
         </section>
 
-        {/* References */}
-        <section className="px-4 sm:px-6 lg:px-8 mt-20">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white text-center"
-            >
-              <h2 className="text-3xl font-bold mb-4">Referanslar</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <h3 className="text-xl font-bold mb-2">Murat Yılmaz</h3>
-                  <p className="mb-2">Manager at TAI</p>
-                  <p className="text-sm">muratyilmaz.metu@gmail.com</p>
-                  <p className="text-sm">+90 543 343 5359</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <h3 className="text-xl font-bold mb-2">Tufan Kesen</h3>
-                  <p className="mb-2">Manager at Linkas</p>
-                  <p className="text-sm">+90 555 638 0799</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
       </div>
     </PageTransition>
   );

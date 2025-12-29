@@ -1,8 +1,11 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -30,6 +33,13 @@ const Footer = () => {
     },
   ];
 
+  const quickLinks = [
+    { label: t('footer.links.home'), href: '/' },
+    { label: t('footer.links.about'), href: '/about' },
+    { label: t('footer.links.projects'), href: '/projects' },
+    { label: t('footer.links.contact'), href: '/contact' },
+  ];
+
   return (
     <footer className="bg-gradient-to-r from-dark to-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,43 +50,30 @@ const Footer = () => {
               Deniz Kantar
             </h3>
             <p className="text-gray-400 leading-relaxed">
-              Flutter Developer & Software Engineer
+              {t('footer.role')}
             </p>
             <p className="text-gray-400 mt-2">
-              Ankara, Turkey
+              {t('footer.location')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Hızlı Linkler</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Ana Sayfa
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  Hakkımda
-                </a>
-              </li>
-              <li>
-                <a href="/projects" className="text-gray-400 hover:text-white transition-colors">
-                  Projeler
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  İletişim
-                </a>
-              </li>
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Bağlantılar</h3>
+            <h3 className="text-xl font-semibold mb-4">{t('footer.connections')}</h3>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <motion.a
@@ -107,7 +104,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Deniz Kantar. Tüm hakları saklıdır.
+            {t('footer.rights', { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>

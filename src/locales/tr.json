@@ -1,0 +1,294 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "experience": "Deneyimler",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "footer": {
+    "quickLinks": "Hızlı Linkler",
+    "links": {
+      "home": "Ana Sayfa",
+      "about": "Hakkımda",
+      "projects": "Projeler",
+      "contact": "İletişim"
+    },
+    "connections": "Bağlantılar",
+    "location": "Ankara, Türkiye",
+    "role": "Flutter Developer & Software Engineer",
+    "rights": "© {{year}} Deniz Kantar. Tüm hakları saklıdır."
+  },
+  "home": {
+    "titleLines": ["Merhaba,", "Ben Deniz Kantar"],
+    "nameText": "Deniz Kantar",
+    "role": "Flutter & Web Developer",
+    "description": "2+ yıllık deneyimle Flutter’da production-grade iOS/Android uygulamalarını yayımlıyor, ölçeklendiriyor ve sürdürüyorum. React ve modern web teknolojileriyle tutarlı arayüzler kuruyor; clean architecture, test odaklı geliştirme ve performans optimizasyonlarıyla kullanıcı ve iş hedeflerine hizalı çözümler üretiyorum.",
+    "ctaPrimary": "Projelerimi İncele",
+    "ctaSecondary": "İletişime Geç",
+    "stats": [
+      { "number": "2+", "label": "Yıl Deneyim" },
+      { "number": "5+", "label": "Tamamlanan Proje" },
+      { "number": "3", "label": "Şirket Deneyimi" },
+      { "number": "10+", "label": "Teknoloji" }
+    ],
+    "skillsTitle": "Uzmanlık Alanlarım",
+    "skillsSubtitle": "Üzerinde çalıştığım teknolojiler ve yeteneklerim",
+    "skills": [
+      {
+        "title": "Mobile Development",
+        "description": "Flutter & Dart ile App Store ve Google Play’de yayınladığım, push notification, offline-first ve performans optimizasyonları yapılmış production-grade mobil uygulamalar",
+        "color": "from-blue-500 to-cyan-500"
+      },
+      {
+        "title": "Frontend Development",
+        "description": "React.js ile responsive, SEO-dostu modern web siteleri ve dashboard’lar; reusable component mimarisi, state management ve erişilebilirlik odaklı deneyimler",
+        "color": "from-purple-500 to-pink-500"
+      },
+      {
+        "title": "Cloud & Backend",
+        "description": "Firebase & GCP üzerinde auth, storage, functions ve gerçek zamanlı veritabanı entegrasyonları; Node.js tabanlı servislerle uçtan uca entegrasyon",
+        "color": "from-orange-500 to-red-500"
+      }
+    ],
+    "ctaSectionTitle": "Bir Proje mi Düşünüyorsunuz?",
+    "ctaSectionText": "Hayalinizdeki mobil veya web uygulamasını birlikte hayata geçirelim!",
+    "ctaSectionButton": "Hemen İletişime Geç"
+  },
+  "about": {
+    "heroTitle": "Hakkımda",
+    "heroDescription": "2 yıllık deneyime sahip Flutter Developer olarak iOS ve Android platformları için production-ready mobil uygulamalar geliştiriyorum. Clean architecture ve modern pratiklerle performanslı, kullanıcı odaklı uygulamalar tasarlıyorum.",
+    "educationTitle": "Eğitim",
+    "education": [
+      { "degree": "MSc Computer Engineering", "school": "Çankaya Üniversitesi", "period": "2025 - Devam" },
+      { "degree": "BSc Electrical & Electronics Engineering", "school": "Çankaya Üniversitesi", "period": "2018 - 2023", "grade": "Genel Not Ortalaması: 3.11" },
+      { "degree": "Lise", "school": "Ankara Lisesi (Anadolu)", "period": "2014 - 2018" }
+    ],
+    "skillsTitle": "Teknik Yetenekler",
+    "skills": {
+      "Mobile Development": ["Flutter (Dart)", "State Management (BLoC, Provider)", "Theming & Localization", "iOS & Android"],
+      "Backend & Cloud": ["Firebase (Auth, Firestore, Cloud Functions)", "Google Cloud Platform", "Realtime Database", "Cloud Storage"],
+      "Frontend": ["React.js", "Next.js", "HTML & CSS", "JavaScript", "Responsive Design"],
+      "Programming Languages": ["C/C++/C#", "Python", "Dart", "JavaScript"],
+      "Tools & Others": ["Git & GitHub", "Figma", "Arduino", "Microsoft Office", "Redux"]
+    },
+    "languagesTitle": "Diller",
+    "languages": [
+      { "name": "English", "level": "B2", "percentage": 75 },
+      { "name": "Spanish", "level": "A2", "percentage": 40 },
+      { "name": "Turkish", "level": "Ana Dil", "percentage": 100 }
+    ],
+    "achievementsTitle": "Ödüller ve Sertifikalar",
+    "achievements": [
+      { "title": "Üçüncülük", "organization": "Çankaya Üniversitesi Ar-Ge Proje Pazarı", "description": "Home Automation System - 15. Ar-Ge Proje Pazarı" },
+      { "title": "Ottonom Engineering Academy", "organization": "Katılım Sertifikası", "description": "Endüstriyel Otomasyon & Otomotiv Elektroniği Eğitimi" }
+    ],
+    "hobbiesTitle": "Hobiler",
+    "hobbies": [
+      { "title": "Latin Dans", "description": "2021’den beri La Dance Academy’de salsa eğitmeni. 1. seviyede eğitim ve koçluk veriyorum.", "icon": "💃" },
+      { "title": "Müzik", "description": "MEB onaylı sertifika ile bağlama ve gitar çalıyorum. Özel ders veriyorum.", "icon": "🎸" }
+    ]
+  },
+  "experience": {
+    "heroTitle": "İş Deneyimlerim",
+    "heroDescription": "Profesyonel kariyerim boyunca edindiğim deneyimler ve katkıda bulunduğum projeler",
+    "professionalTitle": "Profesyonel Deneyimler",
+    "internshipTitle": "Staj Deneyimleri",
+    "linksLabel": "Linkler:",
+    "appsLabel": "Yayınlanan Uygulamalar:",
+    "visitWebsite": "Siteyi Ziyaret Et",
+    "experiences": [
+      {
+        "title": "Mobile & Frontend Developer",
+        "company": "Korsis Bilisim Technology",
+        "location": "Ankara, Türkiye",
+        "period": "07/2024 - 09/2025",
+        "type": "Tam Zamanlı",
+        "description": [
+          "Park24’ü geliştirdim ve yayınladım; sürüm yönetimi, güncellemeler ve bakımını tek başıma yürüttüm.",
+          "Flutter (Provider) ve Firebase ekosistemi (Firestore, Realtime Database, Auth, Cloud Functions, Cloud Storage) ile ölçeklenebilir mobil uygulamalar geliştirdim.",
+          "Google Cloud Platform (GCP) üzerinde serverless çözümler dahil backend servislerini entegre ettim.",
+          "OneSignal ile push bildirimlerini kurguladım, hedefli ve zamanlanmış kampanyalarla etkileşimi artırdım.",
+          "Web ve mobil için Figma ile UI/UX tasarımı, wireframe ve user flow hazırladım.",
+          "React.js ile Park24 web sitesi ve OBSOLIX siber güvenlik ürünü dashboard’unu geliştirdim, frontend ekibine liderlik ettim."
+        ],
+        "links": [
+          { "name": "Şirket Sitesi", "url": "https://www.korsisteknoloji.com/" },
+          { "name": "Park24", "url": "https://park24.org/" },
+          { "name": "OBSOLIX", "url": "https://obsolix.com/" }
+        ],
+        "apps": ["AnkaTur", "Park24 (App Store ve Google Play Store)"],
+        "color": "from-blue-500 to-cyan-500"
+      },
+      {
+        "title": "Mobile Application Developer",
+        "company": "Pepteam Bilisim Inc.",
+        "location": "Remote",
+        "period": "04/2024 - 07/2024",
+        "type": "Tam Zamanlı",
+        "description": [
+          "Flutter ile iOS ve Android projelerine katkı sağladım.",
+          "Tasarım incelemelerini destekleyip geliştirici geri bildirimiyle kullanıcı akışlarını iyileştirdim.",
+          "Firebase + Hive ile offline-first veri desteği kazandırdım.",
+          "Yayın öncesi işlevsel ve kullanılabilirlik testleri yaparak stabiliteyi artırdım."
+        ],
+        "links": [{ "name": "Şirket Sitesi", "url": "https://pepteam.com.tr/" }],
+        "apps": ["Pepteam", "Parently", "Yuppy"],
+        "color": "from-purple-500 to-pink-500"
+      },
+      {
+        "title": "Mobile Application Developer",
+        "company": "Map2heal Information Technologies and Software Inc.",
+        "location": "Remote",
+        "period": "10/2023 - 04/2024",
+        "type": "Tam Zamanlı",
+        "description": [
+          "Flutter tabanlı Remote Patient Monitoring System (Dakik) uygulamasına katkı sağladım.",
+          "Sağlık standartlarına uyumu doğrulayıp hataları giderdim.",
+          "Erişilebilirliği güçlendirmek için kullanıcı odaklı özellikler geliştirdim."
+        ],
+        "links": [{ "name": "Dakik Website", "url": "https://dakik.app" }],
+        "apps": ["Remote Patient Monitoring Systems (Dakik)"],
+        "color": "from-green-500 to-teal-500"
+      }
+    ],
+    "internships": [
+      {
+        "title": "Intern Programmer",
+        "company": "TURKISH AEROSPACE INDUSTRIES (TAI)",
+        "period": "06/2022 - 07/2022",
+        "description": [
+          "OSI katmanları ve UDP üzerine araştırma yaptım.",
+          "Visual Studio ile temel C# öğrendim.",
+          "C# ile UDP soket programlama gerçekleştirdim.",
+          "GUI tasarlayıp soket yapısıyla entegre ettim."
+        ],
+        "website": "https://www.tusas.com/",
+        "color": "from-red-500 to-orange-500"
+      },
+      {
+        "title": "Intern Programmer",
+        "company": "LINKAS TECHNOLOGY INC.",
+        "period": "06/2021 - 07/2021",
+        "description": [
+          "UML diyagramlarıyla C algoritmaları geliştirdim.",
+          "Excel üzerinden CAN bus parametrelerini inceledim.",
+          "CAN ve LIN bus üzerine araştırmalar yaptım.",
+          "MCU için LIN parametrelerini çalıştım ve kodu araçta çalıştırdım."
+        ],
+        "website": "https://www.linkas.com.tr/",
+        "color": "from-yellow-500 to-orange-500"
+      }
+    ]
+  },
+  "projects": {
+    "heroTitle": "Projelerim",
+    "heroSubtitle": "Üzerinde çalıştığım mobil uygulamalar, web projeleri ve IoT sistemleri",
+    "featuredTitle": "Öne Çıkan Projeler",
+    "otherTitle": "Diğer Projeler",
+    "techLabel": "Teknolojiler:",
+    "viewProject": "Projeyi Görüntüle",
+    "categories": [
+      { "key": "All", "label": "Tümü" },
+      { "key": "Mobile App", "label": "Mobil Uygulama" },
+      { "key": "Web App", "label": "Web Uygulaması" },
+      { "key": "IoT Project", "label": "IoT Projesi" }
+    ],
+    "ctaTitle": "GitHub'da Daha Fazla Proje",
+    "ctaDescription": "Diğer açık kaynak projelerim ve kod örneklerim için GitHub profilimi ziyaret edin",
+    "profiles": [
+      { "label": "denizkant", "url": "https://github.com/denizkant" },
+      { "label": "denizzkantarr", "url": "https://github.com/denizzkantarr" }
+    ],
+    "projects": [
+      {
+        "title": "Park24",
+        "category": "Mobile App",
+        "description": "Comprehensive parking management mobile application. Independently managed release, updates, and maintenance. Built with Flutter and Firebase ecosystem.",
+        "technologies": ["Flutter", "Firebase", "Google Cloud Platform", "OneSignal", "Provider"],
+        "image": "📱",
+        "links": [{ "type": "website", "url": "https://park24.org/" }],
+        "color": "from-blue-500 to-cyan-500",
+        "featured": true
+      },
+      {
+        "title": "OBSOLIX",
+        "category": "Web App",
+        "description": "Cybersecurity product dashboard developed with React.js. Led the frontend team and managed development processes.",
+        "technologies": ["React.js", "JavaScript", "Tailwind CSS", "REST API"],
+        "image": "🔐",
+        "links": [{ "type": "website", "url": "https://obsolix.com/" }],
+        "color": "from-purple-500 to-pink-500",
+        "featured": true
+      },
+      {
+        "title": "AnkaTur",
+        "category": "Mobile App",
+        "description": "Mobile application for tourism and transportation services. Developed with Flutter and integrated with backend services.",
+        "technologies": ["Flutter", "Firebase", "Google Maps API", "BLoC"],
+        "image": "🚌",
+        "links": [],
+        "color": "from-green-500 to-teal-500",
+        "featured": false
+      },
+      {
+        "title": "Dakik - Remote Patient Monitoring",
+        "category": "Mobile App",
+        "description": "Healthcare app for patient follow-ups. Ensured compliance with healthcare standards and enhanced accessibility.",
+        "technologies": ["Flutter", "Firebase", "Healthcare APIs", "Provider"],
+        "image": "🏥",
+        "links": [{ "type": "website", "url": "https://dakik.app" }],
+        "color": "from-red-500 to-orange-500",
+        "featured": true
+      },
+      {
+        "title": "Pepteam, Parently, Yuppy",
+        "category": "Mobile App",
+        "description": "Multiple iOS and Android mobile app projects. Enhanced user flows and enabled offline-first data support.",
+        "technologies": ["Flutter", "Firebase", "Hive", "BLoC"],
+        "image": "📲",
+        "links": [{ "type": "website", "url": "https://pepteam.com.tr/" }],
+        "color": "from-yellow-500 to-orange-500",
+        "featured": false
+      },
+      {
+        "title": "Home Automation System (IoT)",
+        "category": "IoT Project",
+        "description": "Smart home system using ESP8266 microcontroller. Won 3rd place in Çankaya University R&D Project Market. Features gas and temperature sensors, LCD interface, and remote access.",
+        "technologies": ["C++", "ESP8266", "Arduino", "Blynk", "IoT"],
+        "image": "🏠",
+        "links": [],
+        "color": "from-indigo-500 to-purple-500",
+        "featured": true
+      },
+      {
+        "title": "Elkin Turizm Website",
+        "category": "Web App",
+        "description": "Kurumsal turizm web sitesi; modern UI, responsive tasarım ve hızlı içerik erişimi için optimize edildi.",
+        "technologies": ["React.js", "Tailwind CSS", "SEO", "Responsive UI"],
+        "image": "🧭",
+        "links": [{ "type": "website", "url": "https://elkin.com.tr/" }],
+        "color": "from-blue-600 to-teal-500",
+        "featured": false
+      }
+    ]
+  },
+  "contact": {
+    "heroTitle": "İletişime Geçin",
+    "heroDescription": "Projeleriniz veya işbirliği fırsatları için benimle iletişime geçmekten çekinmeyin!",
+    "contactInfo": [
+      { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-red-500 to-pink-500" },
+      { "title": "Telefon", "value": "+90 534 010 2240", "link": "tel:+905340102240", "color": "from-green-500 to-teal-500" },
+      { "title": "Konum", "value": "Ankara, Türkiye", "link": "https://www.google.com/maps/place/Ankara", "color": "from-blue-500 to-cyan-500" }
+    ],
+    "aboutTitle": "Birlikte Çalışalım!",
+    "aboutText": "Mobil uygulama geliştirme, web projeleri veya IoT sistemleri konusunda profesyonel çözümler arıyorsanız, doğru yerdesiniz. Flutter, React.js ve modern teknolojilerle projelerinizi hayata geçirebilirim.",
+    "aboutBullets": ["2+ yıl profesyonel deneyim", "Production-ready uygulamalar", "Clean code & best practices"],
+    "socialTitle": "Sosyal Medya",
+    "socialView": "Profili Görüntüle",
+    "availabilityTitle": "Müsaitlik",
+    "availabilityStatus": "Yeni projeler için uygun",
+    "availabilityText": "Freelance projeler ve part-time işbirlikleri için açığım. Projenizi konuşmak için iletişime geçin!"
+  }
+}
+

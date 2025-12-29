@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/images/logo.png';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -17,12 +20,16 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Ana Sayfa', path: '/' },
-    { name: 'Hakkımda', path: '/about' },
-    { name: 'Deneyimler', path: '/experience' },
-    { name: 'Projeler', path: '/projects' },
-    { name: 'İletişim', path: '/contact' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.experience'), path: '/experience' },
+    { name: t('nav.projects'), path: '/projects' },
+    { name: t('nav.contact'), path: '/contact' },
   ];
+
+  const handleLangChange = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <nav
@@ -38,14 +45,17 @@ const Navbar = () => {
           <Link to="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+              className="flex items-center gap-2"
             >
-              Deniz Kantar
+              <img src={logo} alt="Logo" className="h-10 w-10 object-contain rounded-lg" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Deniz Kantar
+              </span>
             </motion.div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -71,6 +81,25 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
+            <div className="flex items-center gap-2 border border-gray-200 rounded-full px-3 py-1.5 bg-white shadow-sm">
+              <button
+                onClick={() => handleLangChange('tr')}
+                className={`text-sm font-semibold ${
+                  i18n.language === 'tr' ? 'text-primary' : 'text-gray-500'
+                }`}
+              >
+                TR
+              </button>
+              <span className="text-gray-300">/</span>
+              <button
+                onClick={() => handleLangChange('en')}
+                className={`text-sm font-semibold ${
+                  i18n.language === 'en' ? 'text-primary' : 'text-gray-500'
+                }`}
+              >
+                EN
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -88,7 +117,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4"
+            className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4 space-y-3"
           >
             {navItems.map((item) => (
               <Link
@@ -104,6 +133,25 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <div className="flex items-center gap-2 border border-gray-200 rounded-full px-3 py-2 bg-white shadow-sm">
+              <button
+                onClick={() => handleLangChange('tr')}
+                className={`text-sm font-semibold ${
+                  i18n.language === 'tr' ? 'text-primary' : 'text-gray-500'
+                }`}
+              >
+                TR
+              </button>
+              <span className="text-gray-300">/</span>
+              <button
+                onClick={() => handleLangChange('en')}
+                className={`text-sm font-semibold ${
+                  i18n.language === 'en' ? 'text-primary' : 'text-gray-500'
+                }`}
+              >
+                EN
+              </button>
+            </div>
           </motion.div>
         )}
       </div>

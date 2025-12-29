@@ -10,8 +10,11 @@ import {
   FaCheckCircle 
 } from 'react-icons/fa';
 import PageTransition from '../components/PageTransition';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,12 +33,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form gönderme işlemi burada yapılacak
-    // EmailJS, Firebase, veya backend API kullanabilirsiniz
     console.log('Form Data:', formData);
     setIsSubmitted(true);
     
-    // 3 saniye sonra formu sıfırla
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -47,29 +47,16 @@ const Contact = () => {
     }, 3000);
   };
 
-  const contactInfo = [
-    {
-      icon: <FaEnvelope />,
-      title: 'Email',
-      value: 'kantar.deniz.83@gmail.com',
-      link: 'mailto:kantar.deniz.83@gmail.com',
-      color: 'from-red-500 to-pink-500',
-    },
-    {
-      icon: <FaPhone />,
-      title: 'Telefon',
-      value: '+90 534 010 2240',
-      link: 'tel:+905340102240',
-      color: 'from-green-500 to-teal-500',
-    },
-    {
-      icon: <FaMapMarkerAlt />,
-      title: 'Konum',
-      value: 'Ankara, Turkey',
-      link: 'https://www.google.com/maps/place/Ankara',
-      color: 'from-blue-500 to-cyan-500',
-    },
-  ];
+  const contactInfo = (t('contact.contactInfo', { returnObjects: true }) || []).map((info) => {
+    const icons = {
+      Email: <FaEnvelope />,
+      Telefon: <FaPhone />,
+      Phone: <FaPhone />,
+      Konum: <FaMapMarkerAlt />,
+      Location: <FaMapMarkerAlt />,
+    };
+    return { ...info, icon: icons[info.title] || <FaEnvelope /> };
+  });
 
   const socialLinks = [
     {
@@ -99,10 +86,10 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                İletişime Geçin
+                {t('contact.heroTitle')}
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Projeleriniz veya işbirliği fırsatları için benimle iletişime geçmekten çekinmeyin!
+                {t('contact.heroDescription')}
               </p>
             </motion.div>
           </div>
@@ -153,33 +140,25 @@ const Contact = () => {
                 {/* About */}
                 <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-xl p-8 text-white">
                   <h2 className="text-3xl font-bold mb-4">
-                    Birlikte Çalışalım!
+                    {t('contact.aboutTitle')}
                   </h2>
                   <p className="text-white/90 leading-relaxed mb-6">
-                    Mobil uygulama geliştirme, web projeleri veya IoT sistemleri konusunda 
-                    profesyonel çözümler arıyorsanız, doğru yerdesiniz. Flutter, React.js ve 
-                    modern teknolojilerle projelerinizi hayata geçirebilirim.
+                    {t('contact.aboutText')}
                   </p>
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <FaCheckCircle className="text-xl" />
-                      <span>2+ yıl profesyonel deneyim</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <FaCheckCircle className="text-xl" />
-                      <span>Production-ready uygulamalar</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <FaCheckCircle className="text-xl" />
-                      <span>Clean code & best practices</span>
-                    </div>
+                    {(t('contact.aboutBullets', { returnObjects: true }) || []).map((bullet, idx) => (
+                      <div className="flex items-center gap-3" key={idx}>
+                        <FaCheckCircle className="text-xl" />
+                        <span>{bullet}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
                 {/* Social Links */}
                 <div className="bg-white rounded-2xl shadow-xl p-8">
                   <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                    Sosyal Medya
+                    {t('contact.socialTitle')}
                   </h3>
                   <div className="space-y-4">
                     {socialLinks.map((social, index) => (
@@ -196,7 +175,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="font-semibold">{social.name}</p>
-                          <p className="text-sm text-white/80">Profili Görüntüle</p>
+                          <p className="text-sm text-white/80">{t('contact.socialView')}</p>
                         </div>
                       </motion.a>
                     ))}
@@ -206,15 +185,14 @@ const Contact = () => {
                 {/* Availability */}
                 <div className="bg-white rounded-2xl shadow-xl p-8">
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                    Müsaitlik
+                    {t('contact.availabilityTitle')}
                   </h3>
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-gray-700 font-semibold">Yeni projeler için uygun</span>
+                    <span className="text-gray-700 font-semibold">{t('contact.availabilityStatus')}</span>
                   </div>
                   <p className="text-gray-600">
-                    Freelance projeler ve part-time işbirlikleri için açığım. 
-                    Projenizi konuşmak için iletişime geçin!
+                    {t('contact.availabilityText')}
                   </p>
                 </div>
               </motion.div>

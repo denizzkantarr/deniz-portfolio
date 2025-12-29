@@ -2,95 +2,17 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaFilter } from 'react-icons/fa';
 import PageTransition from '../components/PageTransition';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [filter, setFilter] = useState('All');
 
-  const projects = [
-    {
-      title: 'Park24',
-      category: 'Mobile App',
-      description: 'Comprehensive parking management mobile application. Independently managed release, updates, and maintenance. Built with Flutter and Firebase ecosystem.',
-      technologies: ['Flutter', 'Firebase', 'Google Cloud Platform', 'OneSignal', 'Provider'],
-      image: '📱',
-      links: [
-        { type: 'website', url: 'https://park24.org/' },
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      featured: true,
-    },
-    {
-      title: 'OBSOLIX',
-      category: 'Web App',
-      description: 'Cybersecurity product dashboard developed with React.js. Led the frontend team and managed development processes.',
-      technologies: ['React.js', 'JavaScript', 'Tailwind CSS', 'REST API'],
-      image: '🔐',
-      links: [
-        { type: 'website', url: 'https://obsolix.com/' },
-      ],
-      color: 'from-purple-500 to-pink-500',
-      featured: true,
-    },
-    {
-      title: 'AnkaTur',
-      category: 'Mobile App',
-      description: 'Mobile application for tourism and transportation services. Developed with Flutter and integrated with backend services.',
-      technologies: ['Flutter', 'Firebase', 'Google Maps API', 'BLoC'],
-      image: '🚌',
-      links: [],
-      color: 'from-green-500 to-teal-500',
-      featured: false,
-    },
-    {
-      title: 'Dakik - Remote Patient Monitoring',
-      category: 'Mobile App',
-      description: 'Healthcare app for patient follow-ups. Ensured compliance with healthcare standards and enhanced accessibility.',
-      technologies: ['Flutter', 'Firebase', 'Healthcare APIs', 'Provider'],
-      image: '🏥',
-      links: [
-        { type: 'website', url: 'https://dakik.app' },
-      ],
-      color: 'from-red-500 to-orange-500',
-      featured: true,
-    },
-    {
-      title: 'Pepteam, Parently, Yuppy',
-      category: 'Mobile App',
-      description: 'Multiple iOS and Android mobile app projects. Enhanced user flows and enabled offline-first data support.',
-      technologies: ['Flutter', 'Firebase', 'Hive', 'BLoC'],
-      image: '📲',
-      links: [
-        { type: 'website', url: 'https://pepteam.com.tr/' },
-      ],
-      color: 'from-yellow-500 to-orange-500',
-      featured: false,
-    },
-    {
-      title: 'Home Automation System (IoT)',
-      category: 'IoT Project',
-      description: 'Smart home system using ESP8266 microcontroller. Won 3rd place in Çankaya University R&D Project Market. Features gas and temperature sensors, LCD interface, and remote access.',
-      technologies: ['C++', 'ESP8266', 'Arduino', 'Blynk', 'IoT'],
-      image: '🏠',
-      links: [],
-      color: 'from-indigo-500 to-purple-500',
-      featured: true,
-    },
-    {
-      title: 'Writing to Display',
-      category: 'Embedded Systems',
-      description: 'Assembly language project to write text on Nokia 5110 using Arm Cortex development board.',
-      technologies: ['Assembly', 'Arm Cortex', 'Embedded C'],
-      image: '💻',
-      links: [],
-      color: 'from-gray-500 to-gray-700',
-      featured: false,
-    },
-  ];
+  const projects = t('projects.projects', { returnObjects: true }) || [];
+  const categories = t('projects.categories', { returnObjects: true }) || [];
 
-  const categories = ['All', 'Mobile App', 'Web App', 'IoT Project', 'Embedded Systems'];
-
-  const filteredProjects = filter === 'All' 
-    ? projects 
+  const filteredProjects = filter === 'All'
+    ? projects
     : projects.filter(project => project.category === filter);
 
   return (
@@ -104,10 +26,10 @@ const Projects = () => {
               animate={{ opacity: 1, y: 0 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                Projelerim
+                {t('projects.heroTitle')}
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Üzerinde çalıştığım mobil uygulamalar, web projeleri ve IoT sistemleri
+                {t('projects.heroSubtitle')}
               </p>
             </motion.div>
           </div>
@@ -124,17 +46,17 @@ const Projects = () => {
               <FaFilter className="text-primary text-xl" />
               {categories.map((category) => (
                 <motion.button
-                  key={category}
+                  key={category.key}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => setFilter(category)}
+                  onClick={() => setFilter(category.key)}
                   className={`px-6 py-2 rounded-full font-semibold transition-all ${
-                    filter === category
+                    filter === category.key
                       ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg'
                       : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
                   }`}
                 >
-                  {category}
+                  {category.label}
                 </motion.button>
               ))}
             </motion.div>
@@ -150,7 +72,7 @@ const Projects = () => {
               viewport={{ once: true }}
               className="text-3xl font-bold text-gray-800 mb-8"
             >
-              Öne Çıkan Projeler
+              {t('projects.featuredTitle')}
             </motion.h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -183,7 +105,7 @@ const Projects = () => {
 
                       {/* Technologies */}
                       <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">Teknolojiler:</h4>
+                        <h4 className="font-semibold text-gray-800 mb-2">{t('projects.techLabel')}</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech, idx) => (
                             <span
@@ -230,7 +152,7 @@ const Projects = () => {
                 viewport={{ once: true }}
                 className="text-3xl font-bold text-gray-800 mb-8"
               >
-                Diğer Projeler
+                {t('projects.otherTitle')}
               </motion.h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -279,7 +201,7 @@ const Projects = () => {
                               className="text-primary hover:text-secondary transition-colors text-sm font-semibold flex items-center gap-1"
                             >
                               <FaExternalLinkAlt />
-                              View Project
+                              {t('projects.viewProject')}
                             </a>
                           ))}
                         </div>
@@ -301,29 +223,23 @@ const Projects = () => {
               className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 text-white text-center"
             >
               <FaGithub className="text-6xl mx-auto mb-4" />
-              <h2 className="text-3xl font-bold mb-4">GitHub'da Daha Fazla Proje</h2>
+              <h2 className="text-3xl font-bold mb-4">{t('projects.ctaTitle')}</h2>
               <p className="text-gray-300 mb-6">
-                Diğer açık kaynak projelerim ve kod örneklerim için GitHub profilimi ziyaret edin
+                {t('projects.ctaDescription')}
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
-                <a
-                  href="https://github.com/denizkant"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all inline-flex items-center gap-2"
-                >
-                  <FaGithub />
-                  denizkant
-                </a>
-                <a
-                  href="https://github.com/denizzkantarr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all inline-flex items-center gap-2"
-                >
-                  <FaGithub />
-                  denizzkantarr
-                </a>
+                {t('projects.profiles', { returnObjects: true }).map((profile) => (
+                  <a
+                    key={profile.url}
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all inline-flex items-center gap-2"
+                  >
+                    <FaGithub />
+                    {profile.label}
+                  </a>
+                ))}
               </div>
             </motion.div>
           </div>

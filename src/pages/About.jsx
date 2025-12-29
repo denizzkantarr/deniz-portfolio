@@ -2,96 +2,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaCode, FaLanguage, FaAward } from 'react-icons/fa';
 import PageTransition from '../components/PageTransition';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
-  const education = [
-    {
-      degree: 'MSc Computer Engineering',
-      school: 'Çankaya University',
-      period: '2025 - Present',
-      icon: <FaGraduationCap />,
-    },
-    {
-      degree: 'BSc Electrical & Electronics Engineering',
-      school: 'Çankaya University',
-      period: '2018 - 2023',
-      grade: 'Final Grade: 3.11',
-      icon: <FaGraduationCap />,
-    },
-    {
-      degree: 'High School',
-      school: 'Ankara Lisesi (Anadolu)',
-      period: '2014 - 2018',
-      icon: <FaGraduationCap />,
-    },
-  ];
+  const { t } = useTranslation();
 
-  const skills = {
-    'Mobile Development': [
-      'Flutter (Dart)',
-      'State Management (BLoC, Provider)',
-      'Theming & Localization',
-      'iOS & Android',
-    ],
-    'Backend & Cloud': [
-      'Firebase (Auth, Firestore, Cloud Functions)',
-      'Google Cloud Platform',
-      'Realtime Database',
-      'Cloud Storage',
-    ],
-    'Frontend': [
-      'React.js',
-      'HTML & CSS',
-      'JavaScript',
-      'Responsive Design',
-    ],
-    'Programming Languages': [
-      'C/C++/C#',
-      'Python',
-      'Dart',
-      'JavaScript',
-    ],
-    'Tools & Others': [
-      'Git & GitHub',
-      'Figma',
-      'Arduino',
-      'Microsoft Office',
-    ],
-  };
+  const education = (t('about.education', { returnObjects: true }) || []).map((edu) => ({
+    ...edu,
+    icon: <FaGraduationCap />,
+  }));
 
-  const languages = [
-    { name: 'English', level: 'B2', percentage: 75 },
-    { name: 'Spanish', level: 'A2', percentage: 40 },
-    { name: 'Turkish', level: 'Native', percentage: 100 },
-  ];
+  const skills = t('about.skills', { returnObjects: true }) || {};
 
-  const achievements = [
-    {
-      title: 'Third Place',
-      organization: 'Çankaya University R&D Project Market',
-      description: 'Home Automation System - 15th R&D Project Market',
-      icon: <FaAward />,
-    },
-    {
-      title: 'Ottonom Engineering Academy',
-      organization: 'Certificate of Participation',
-      description: 'Industrial Automation & Automotive Electronics Training',
-      icon: <FaAward />,
-    },
-  ];
+  const languages = t('about.languages', { returnObjects: true }) || [];
 
-  const hobbies = [
-    {
-      title: 'Latin Dance',
-      description: 'Salsa instructor at La Dance Academy since 2021. Teaching and coaching at 1st level.',
-      icon: '💃',
-    },
-    {
-      title: 'Music',
-      description: 'Playing bağlama and guitar with MEB-approved certificate. Giving private lessons.',
-      icon: '🎸',
-    },
-  ];
+  const achievements = (t('about.achievements', { returnObjects: true }) || []).map((item) => ({
+    ...item,
+    icon: <FaAward />,
+  }));
+
+  const hobbies = t('about.hobbies', { returnObjects: true }) || [];
 
   return (
     <PageTransition>
@@ -105,12 +35,10 @@ const About = () => {
               className="text-center mb-12"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-                Hakkımda
+                {t('about.heroTitle')}
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                2 yıllık deneyime sahip Flutter Developer olarak iOS ve Android platformları için
-                production-ready mobil uygulamalar geliştiriyorum. Clean architecture ve modern
-                pratiklerle performanslı, kullanıcı odaklı uygulamalar tasarlıyorum.
+                {t('about.heroDescription')}
               </p>
             </motion.div>
           </div>
@@ -126,7 +54,7 @@ const About = () => {
               className="text-4xl font-bold text-gray-800 mb-12 text-center"
             >
               <FaGraduationCap className="inline-block mr-3 text-primary" />
-              Eğitim
+              {t('about.educationTitle')}
             </motion.h2>
 
             <div className="space-y-6">
@@ -172,7 +100,7 @@ const About = () => {
               className="text-4xl font-bold text-gray-800 mb-12 text-center"
             >
               <FaCode className="inline-block mr-3 text-primary" />
-              Teknik Yetenekler
+              {t('about.skillsTitle')}
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -212,7 +140,7 @@ const About = () => {
               className="text-4xl font-bold text-gray-800 mb-12 text-center"
             >
               <FaLanguage className="inline-block mr-3 text-primary" />
-              Diller
+              {t('about.languagesTitle')}
             </motion.h2>
 
             <div className="space-y-6">
@@ -253,7 +181,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-4xl font-bold text-gray-800 mb-12 text-center"
             >
-              Ödüller ve Sertifikalar
+              {t('about.achievementsTitle')}
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -295,7 +223,7 @@ const About = () => {
               viewport={{ once: true }}
               className="text-4xl font-bold text-gray-800 mb-12 text-center"
             >
-              Hobiler
+              {t('about.hobbiesTitle')}
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

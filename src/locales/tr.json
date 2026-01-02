@@ -203,8 +203,8 @@
     "projects": [
       {
         "title": "Park24",
-        "category": "Mobile App",
-        "description": "Comprehensive parking management mobile application. Independently managed release, updates, and maintenance. Built with Flutter and Firebase ecosystem.",
+        "category": "Mobil Uygulama",
+        "description": "Park24 otopark yönetimi uygulamasını geliştirdim ve yayınladım; sürüm, güncelleme ve bakım süreçlerini tek başıma yönettim. Flutter ve Firebase ekosistemi üzerine kurulu.",
         "technologies": ["Flutter", "Firebase", "Google Cloud Platform", "OneSignal", "Provider"],
         "image": "📱",
         "links": [{ "type": "website", "url": "https://park24.org/" }],
@@ -213,8 +213,8 @@
       },
       {
         "title": "OBSOLIX",
-        "category": "Web App",
-        "description": "Cybersecurity product dashboard developed with React.js. Led the frontend team and managed development processes.",
+        "category": "Web Uygulaması",
+        "description": "React.js ile siber güvenlik ürünü OBSOLIX’in dashboard’u ve web sitesini geliştirdim; frontend ekibini yönettim, süreçleri koordine ettim.",
         "technologies": ["React.js", "JavaScript", "Tailwind CSS", "REST API"],
         "image": "🔐",
         "links": [{ "type": "website", "url": "https://obsolix.com/" }],
@@ -223,8 +223,8 @@
       },
       {
         "title": "AnkaTur",
-        "category": "Mobile App",
-        "description": "Mobile application for tourism and transportation services. Developed with Flutter and integrated with backend services.",
+        "category": "Mobil Uygulama",
+        "description": "Turizm ve ulaşım hizmetleri için Flutter ile geliştirilmiş mobil uygulama; backend servislerle entegre edildi.",
         "technologies": ["Flutter", "Firebase", "Google Maps API", "BLoC"],
         "image": "🚌",
         "links": [],
@@ -233,8 +233,8 @@
       },
       {
         "title": "Dakik - Remote Patient Monitoring",
-        "category": "Mobile App",
-        "description": "Healthcare app for patient follow-ups. Ensured compliance with healthcare standards and enhanced accessibility.",
+        "category": "Mobil Uygulama",
+        "description": "Hasta takip için sağlık uygulaması; sağlık standartlarına uyumlu, erişilebilirliği artırılmış ve Flutter + Firebase altyapısıyla geliştirildi.",
         "technologies": ["Flutter", "Firebase", "Healthcare APIs", "Provider"],
         "image": "🏥",
         "links": [{ "type": "website", "url": "https://dakik.app" }],
@@ -243,8 +243,8 @@
       },
       {
         "title": "Pepteam, Parently, Yuppy",
-        "category": "Mobile App",
-        "description": "Multiple iOS and Android mobile app projects. Enhanced user flows and enabled offline-first data support.",
+        "category": "Mobil Uygulama",
+        "description": "Birden fazla iOS/Android uygulaması; kullanıcı akışlarını iyileştirdim, offline-first veri desteği ekledim.",
         "technologies": ["Flutter", "Firebase", "Hive", "BLoC"],
         "image": "📲",
         "links": [{ "type": "website", "url": "https://pepteam.com.tr/" }],
@@ -253,8 +253,8 @@
       },
       {
         "title": "Home Automation System (IoT)",
-        "category": "IoT Project",
-        "description": "Smart home system using ESP8266 microcontroller. Won 3rd place in Çankaya University R&D Project Market. Features gas and temperature sensors, LCD interface, and remote access.",
+        "category": "IoT Projesi",
+        "description": "ESP8266 tabanlı akıllı ev sistemi; gaz/sıcaklık sensörleri, LCD arayüz ve uzaktan erişim özellikleriyle Çankaya Üniversitesi Ar-Ge Proje Pazarı’nda 3.’lük kazandı.",
         "technologies": ["C++", "ESP8266", "Arduino", "Blynk", "IoT"],
         "image": "🏠",
         "links": [],
@@ -263,7 +263,7 @@
       },
       {
         "title": "Elkin Turizm Website",
-        "category": "Web App",
+        "category": "Web Uygulaması",
         "description": "Kurumsal turizm web sitesi; modern UI, responsive tasarım ve hızlı içerik erişimi için optimize edildi.",
         "technologies": ["React.js", "Tailwind CSS", "SEO", "Responsive UI"],
         "image": "🧭",
@@ -277,9 +277,8 @@
     "heroTitle": "İletişime Geçin",
     "heroDescription": "Projeleriniz veya işbirliği fırsatları için benimle iletişime geçmekten çekinmeyin!",
     "contactInfo": [
-      { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-red-500 to-pink-500" },
-      { "title": "Telefon", "value": "+90 534 010 2240", "link": "tel:+905340102240", "color": "from-green-500 to-teal-500" },
-      { "title": "Konum", "value": "Ankara, Türkiye", "link": "https://www.google.com/maps/place/Ankara", "color": "from-blue-500 to-cyan-500" }
+      { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-primary to-secondary", "icon": "mail" },
+      { "title": "Konum", "value": "Ankara, Türkiye", "link": "https://www.google.com/maps/place/Ankara", "color": "from-secondary to-primary", "icon": "map" }
     ],
     "aboutTitle": "Birlikte Çalışalım!",
     "aboutText": "Mobil uygulama geliştirme, web projeleri veya IoT sistemleri konusunda profesyonel çözümler arıyorsanız, doğru yerdesiniz. Flutter, React.js ve modern teknolojilerle projelerinizi hayata geçirebilirim.",

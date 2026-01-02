@@ -48,14 +48,12 @@ const Contact = () => {
   };
 
   const contactInfo = (t('contact.contactInfo', { returnObjects: true }) || []).map((info) => {
-    const icons = {
-      Email: <FaEnvelope />,
-      Telefon: <FaPhone />,
-      Phone: <FaPhone />,
-      Konum: <FaMapMarkerAlt />,
-      Location: <FaMapMarkerAlt />,
+    const iconMap = {
+      mail: <FaEnvelope />,
+      phone: <FaPhone />,
+      map: <FaMapMarkerAlt />,
     };
-    return { ...info, icon: icons[info.title] || <FaEnvelope /> };
+    return { ...info, icon: iconMap[info.icon] || <FaEnvelope /> };
   });
 
   const socialLinks = [
@@ -97,8 +95,8 @@ const Contact = () => {
 
         {/* Contact Info Cards */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={index}
@@ -108,18 +106,19 @@ const Contact = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -10 }}
-                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all text-center"
+                  whileHover={{ y: -6 }}
+                  className="group relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center text-white text-3xl mx-auto mb-4`}>
-                    {info.icon}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="p-8 relative z-10 flex items-center gap-4">
+                    <div className={`w-14 h-14 bg-gradient-to-br ${info.color} rounded-xl flex items-center justify-center text-white text-2xl shadow-md`}>
+                      {info.icon}
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <h3 className="text-lg font-bold text-gray-800 mb-1">{info.title}</h3>
+                      <p className="text-gray-600 text-sm">{info.value}</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {info.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {info.value}
-                  </p>
                 </motion.a>
               ))}
             </div>

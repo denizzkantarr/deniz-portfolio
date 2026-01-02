@@ -214,7 +214,7 @@
       {
         "title": "OBSOLIX",
         "category": "Web App",
-        "description": "Cybersecurity product dashboard developed with React.js. Led the frontend team and managed development processes.",
+        "description": "Cybersecurity product dashboard and website developed with React.js. Led the frontend team and managed development processes.",
         "technologies": ["React.js", "JavaScript", "Tailwind CSS", "REST API"],
         "image": "🔐",
         "links": [{ "type": "website", "url": "https://obsolix.com/" }],
@@ -277,9 +277,8 @@
     "heroTitle": "Get in Touch",
     "heroDescription": "Feel free to reach out for your projects or collaboration opportunities!",
     "contactInfo": [
-      { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-red-500 to-pink-500" },
-      { "title": "Phone", "value": "+90 534 010 2240", "link": "tel:+905340102240", "color": "from-green-500 to-teal-500" },
-      { "title": "Location", "value": "Ankara, Turkey", "link": "https://www.google.com/maps/place/Ankara", "color": "from-blue-500 to-cyan-500" }
+      { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-primary to-secondary", "icon": "mail" },
+      { "title": "Location", "value": "Ankara, Turkey", "link": "https://www.google.com/maps/place/Ankara", "color": "from-secondary to-primary", "icon": "map" }
     ],
     "aboutTitle": "Let’s Work Together!",
     "aboutText": "If you need professional solutions for mobile development, web projects, or IoT systems, you’re in the right place. I can bring your projects to life with Flutter, React.js, and modern technologies.",

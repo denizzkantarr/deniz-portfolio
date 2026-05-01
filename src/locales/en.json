@@ -22,42 +22,43 @@
   "home": {
     "titleLines": ["Hello,", "I am Deniz Kantar"],
     "nameText": "Deniz Kantar",
-    "role": "Flutter & Web Developer",
-    "description": "With 2+ years of experience, I publish, scale, and maintain production-grade iOS/Android apps with Flutter. I build consistent interfaces with React and modern web tech, delivering solutions aligned with user needs and business goals through clean architecture, test-driven development, and performance optimization.",
+    "role": "Flutter & Web Developer • AI Enthusiast",
+    "description": "With 2+ years of experience, I publish, scale, and maintain production-grade iOS/Android apps with Flutter. I also build projects in AI, image processing, and modern web development.",
+    "availableBadge": "Open to new projects",
     "ctaPrimary": "View My Projects",
     "ctaSecondary": "Contact Me",
     "stats": [
       { "number": "2+", "label": "Years Experience" },
-      { "number": "5+", "label": "Completed Projects" },
+      { "number": "15+", "label": "Completed Projects" },
       { "number": "3", "label": "Company Experience" },
-      { "number": "10+", "label": "Technologies" }
+      { "number": "15+", "label": "Technologies" }
     ],
     "skillsTitle": "My Expertise",
-    "skillsSubtitle": "Technologies and skills I work with",
+    "skillsSubtitle": "Technologies I work with",
     "skills": [
       {
         "title": "Mobile Development",
-        "description": "Production-grade Flutter apps on App Store and Google Play with push notifications, offline-first flows, and performance optimizations",
+        "description": "Production-grade Flutter apps on App Store and Google Play with push notifications, offline-first flows, and performance optimizations.",
         "color": "from-blue-500 to-cyan-500"
       },
       {
         "title": "Frontend Development",
-        "description": "Responsive, SEO-friendly React.js web apps and dashboards with reusable components, state management, and accessibility focus",
-        "color": "from-purple-500 to-pink-500"
+        "description": "Responsive, SEO-friendly React.js web apps and dashboards with reusable components, state management, and accessibility focus.",
+        "color": "from-primary to-secondary"
       },
       {
-        "title": "Cloud & Backend",
-        "description": "Firebase & GCP integrations (auth, storage, functions, realtime DB) and Node.js services for end-to-end delivery",
-        "color": "from-orange-500 to-red-500"
+        "title": "Others",
+        "description": "Machine learning models with Python, OpenCV-based image processing projects, and deep learning applications.",
+        "color": "from-cyan-500 to-emerald-500"
       }
     ],
     "ctaSectionTitle": "Thinking About a Project?",
-    "ctaSectionText": "Let’s build your dream mobile or web application together!",
+    "ctaSectionText": "Let's build your dream mobile, web, or AI application together!",
     "ctaSectionButton": "Contact Now"
   },
   "about": {
     "heroTitle": "About Me",
-    "heroDescription": "As a Flutter Developer with 2 years of experience, I build production-ready mobile apps for iOS and Android. I design performant, user-centric solutions with clean architecture and modern practices.",
+    "heroDescription": "As a Flutter Developer, I build production-ready mobile apps for iOS and Android. I also work on AI, image processing, and web development projects.",
     "educationTitle": "Education",
     "education": [
       { "degree": "MSc Computer Engineering", "school": "Çankaya University", "period": "2025 - Present" },
@@ -66,11 +67,12 @@
     ],
     "skillsTitle": "Technical Skills",
     "skills": {
-      "Mobile Development": ["Flutter (Dart)", "State Management (BLoC, Provider)", "Theming & Localization", "iOS & Android"],
-      "Backend & Cloud": ["Firebase (Auth, Firestore, Cloud Functions)", "Google Cloud Platform", "Realtime Database", "Cloud Storage"],
-      "Frontend": ["React.js", "Next.js", "HTML & CSS", "JavaScript", "Responsive Design"],
+      "Mobile Development": ["Flutter (Dart)", "State Management (BLoC, Provider, Riverpod)", "RevenueCat", "OneSignal", "Theming & Localization", "iOS & Android"],
+      "Backend & Cloud": ["Firebase (Auth, Firestore, Cloud Functions)", "Supabase", "Google Cloud Platform", "Realtime Database", "Cloud Storage"],
+      "AI & ML": ["Python", "TensorFlow / Keras", "Scikit-learn", "OpenCV"],
+      "Frontend": ["React.js", "Next.js", "HTML & CSS", "JavaScript", "Tailwind CSS"],
       "Programming Languages": ["C/C++/C#", "Python", "Dart", "JavaScript"],
-      "Tools & Others": ["Git & GitHub", "Figma", "Arduino", "Microsoft Office", "Redux"]
+      "Tools & Others": ["Git & GitHub", "Figma", "Postman", "Android Studio", "Xcode"]
     },
     "languagesTitle": "Languages",
     "languages": [
@@ -99,6 +101,21 @@
     "visitWebsite": "Visit Website",
     "experiences": [
       {
+        "title": "Freelance Developer",
+        "company": "Self-employed",
+        "location": "Remote",
+        "period": "10/2025 - Present",
+        "type": "Freelance",
+        "description": [
+          "Developing professional websites and mobile applications for individual and corporate clients on demand.",
+          "Building cross-platform mobile apps with Flutter and modern web projects with React.js.",
+          "Delivering end-to-end solutions from UI/UX design to backend integration based on client requirements."
+        ],
+        "links": [],
+        "apps": [],
+        "color": "from-violet-600 to-purple-500"
+      },
+      {
         "title": "Mobile & Frontend Developer",
         "company": "Korsis Bilisim Technology",
         "location": "Ankara, Turkey",
@@ -118,7 +135,7 @@
           { "name": "OBSOLIX", "url": "https://obsolix.com/" }
         ],
         "apps": ["AnkaTur", "Park24 (App Store and Google Play Store)"],
-        "color": "from-blue-500 to-cyan-500"
+        "color": "from-blue-600 to-cyan-500"
       },
       {
         "title": "Mobile Application Developer",
@@ -130,11 +147,12 @@
           "Contributed to Flutter-based iOS and Android projects.",
           "Improved user flows by supporting design reviews and providing developer feedback.",
           "Enabled offline-first support by integrating Firebase with Hive.",
+          "Structured state management architecture using Riverpod.",
           "Performed functional and usability testing to ensure stability before release."
         ],
         "links": [{ "name": "Company Website", "url": "https://pepteam.com.tr/" }],
         "apps": ["Pepteam", "Parently", "Yuppy"],
-        "color": "from-purple-500 to-pink-500"
+        "color": "from-primary to-secondary"
       },
       {
         "title": "Mobile Application Developer",
@@ -149,7 +167,7 @@
         ],
         "links": [{ "name": "Dakik Website", "url": "https://dakik.app" }],
         "apps": ["Remote Patient Monitoring Systems (Dakik)"],
-        "color": "from-green-500 to-teal-500"
+        "color": "from-emerald-500 to-teal-500"
       }
     ],
     "internships": [
@@ -183,16 +201,16 @@
   },
   "projects": {
     "heroTitle": "My Projects",
-    "heroSubtitle": "Mobile apps, web projects, and IoT systems I’ve worked on",
-    "featuredTitle": "Featured Projects",
-    "otherTitle": "Other Projects",
+    "heroSubtitle": "Mobile apps, AI, image processing, web, and IoT projects",
     "techLabel": "Technologies:",
     "viewProject": "View Project",
     "categories": [
-      { "key": "All", "label": "All" },
-      { "key": "Mobile App", "label": "Mobile App" },
-      { "key": "Web App", "label": "Web App" },
-      { "key": "IoT Project", "label": "IoT Project" }
+      { "key": "All",              "label": "All" },
+      { "key": "Flutter",          "label": "Flutter" },
+      { "key": "AI/ML",            "label": "AI / ML" },
+      { "key": "Image Processing", "label": "Image Processing" },
+      { "key": "Web App",          "label": "Web App" },
+      { "key": "IoT",              "label": "IoT" }
     ],
     "ctaTitle": "More Projects on GitHub",
     "ctaDescription": "Visit my GitHub profile for more open-source work and code samples",
@@ -203,73 +221,138 @@
     "projects": [
       {
         "title": "Park24",
-        "category": "Mobile App",
-        "description": "Comprehensive parking management mobile application. Independently managed release, updates, and maintenance. Built with Flutter and Firebase ecosystem.",
-        "technologies": ["Flutter", "Firebase", "Google Cloud Platform", "OneSignal", "Provider"],
+        "category": "Flutter",
+        "description": "Parking management app I developed and published end-to-end. Handled all releases, updates, and maintenance. Built with Flutter and Firebase ecosystem.",
+        "technologies": ["Flutter", "Firebase", "GCP", "OneSignal", "Provider"],
         "image": "📱",
         "links": [{ "type": "website", "url": "https://park24.org/" }],
-        "color": "from-blue-500 to-cyan-500",
-        "featured": true
+        "color": "from-blue-600 to-cyan-500"
       },
       {
-        "title": "OBSOLIX",
+        "title": "OBSOLIX Dashboard",
         "category": "Web App",
         "description": "Cybersecurity product dashboard and website developed with React.js. Led the frontend team and managed development processes.",
         "technologies": ["React.js", "JavaScript", "Tailwind CSS", "REST API"],
         "image": "🔐",
         "links": [{ "type": "website", "url": "https://obsolix.com/" }],
-        "color": "from-purple-500 to-pink-500",
-        "featured": true
+        "color": "from-primary to-secondary"
       },
       {
         "title": "AnkaTur",
-        "category": "Mobile App",
-        "description": "Mobile application for tourism and transportation services. Developed with Flutter and integrated with backend services.",
+        "category": "Flutter",
+        "description": "Flutter mobile app for tourism and transportation services with Google Maps integration and backend connectivity.",
         "technologies": ["Flutter", "Firebase", "Google Maps API", "BLoC"],
         "image": "🚌",
         "links": [],
-        "color": "from-green-500 to-teal-500",
-        "featured": false
+        "color": "from-emerald-500 to-teal-500"
       },
       {
-        "title": "Dakik - Remote Patient Monitoring",
-        "category": "Mobile App",
-        "description": "Healthcare app for patient follow-ups. Ensured compliance with healthcare standards and enhanced accessibility.",
+        "title": "Dakik — Remote Patient Monitoring",
+        "category": "Flutter",
+        "description": "Healthcare patient monitoring app built with Flutter. Ensured healthcare compliance and enhanced accessibility features.",
         "technologies": ["Flutter", "Firebase", "Healthcare APIs", "Provider"],
         "image": "🏥",
         "links": [{ "type": "website", "url": "https://dakik.app" }],
-        "color": "from-red-500 to-orange-500",
-        "featured": true
+        "color": "from-red-500 to-orange-500"
       },
       {
         "title": "Pepteam, Parently, Yuppy",
-        "category": "Mobile App",
-        "description": "Multiple iOS and Android mobile app projects. Enhanced user flows and enabled offline-first data support.",
+        "category": "Flutter",
+        "description": "Multiple Flutter iOS/Android apps. Improved user flows, added offline-first support, and performed pre-release testing.",
         "technologies": ["Flutter", "Firebase", "Hive", "BLoC"],
         "image": "📲",
         "links": [{ "type": "website", "url": "https://pepteam.com.tr/" }],
-        "color": "from-yellow-500 to-orange-500",
-        "featured": false
+        "color": "from-yellow-500 to-orange-500"
       },
       {
-        "title": "Home Automation System (IoT)",
-        "category": "IoT Project",
-        "description": "Smart home system using ESP8266 microcontroller. Won 3rd place in Çankaya University R&D Project Market. Features gas and temperature sensors, LCD interface, and remote access.",
+        "title": "Home Automation System",
+        "category": "IoT",
+        "description": "ESP8266-based smart home system with gas/temperature sensors, LCD interface, and remote access. Won 3rd place at Çankaya University R&D Project Market.",
         "technologies": ["C++", "ESP8266", "Arduino", "Blynk", "IoT"],
         "image": "🏠",
         "links": [],
-        "color": "from-indigo-500 to-purple-500",
-        "featured": true
+        "color": "from-indigo-500 to-purple-500"
       },
       {
-        "title": "Elkin Turizm Website",
+        "title": "Elkin Turizm",
         "category": "Web App",
-        "description": "Corporate tourism website with modern UI, responsive design, and fast content access.",
+        "description": "Corporate tourism website with modern UI, responsive design, and optimized content delivery.",
         "technologies": ["React.js", "Tailwind CSS", "SEO", "Responsive UI"],
         "image": "🧭",
         "links": [{ "type": "website", "url": "https://elkin.com.tr/" }],
-        "color": "from-blue-600 to-teal-500",
-        "featured": false
+        "color": "from-blue-500 to-teal-500"
+      },
+      {
+        "title": "MCP RAG",
+        "category": "AI/ML",
+        "description": "An AI system combining MCP (Model Context Protocol) with RAG (Retrieval-Augmented Generation) architecture. Enhances LLM-based queries with a context enrichment layer to produce more accurate, source-grounded responses.",
+        "technologies": ["Python", "LangChain", "OpenAI API", "RAG", "MCP"],
+        "image": "🤖",
+        "links": [{ "type": "github", "url": "https://github.com/denizzkantarr/mcp_rag" }],
+        "color": "from-cyan-500 to-blue-500"
+      },
+      {
+        "title": "DQN LunarLander",
+        "category": "AI/ML",
+        "description": "Deep Q-Network (DQN) implementation trained on OpenAI Gym's LunarLander-v2 environment. The agent learns to safely land a spacecraft on the lunar surface through reinforcement learning.",
+        "technologies": ["Python", "PyTorch", "OpenAI Gym", "Reinforcement Learning", "DQN"],
+        "image": "🧠",
+        "links": [{ "type": "github", "url": "https://github.com/denizzkantarr/DQN_LunarLander" }],
+        "color": "from-blue-500 to-indigo-500"
+      },
+      {
+        "title": "PetCaps",
+        "category": "Flutter",
+        "description": "Social platform being developed for pet owners. Features include profile creation, post sharing, and community interaction. (Work in Progress)",
+        "technologies": ["Flutter", "Firebase", "Riverpod", "Supabase"],
+        "image": "🐾",
+        "links": [],
+        "color": "from-sky-500 to-blue-500"
+      },
+      {
+        "title": "TripTrick",
+        "category": "Flutter",
+        "description": "AI-powered travel planning and discovery platform. Provides personalized route recommendations and travel tips. (Work in Progress)",
+        "technologies": ["Flutter", "Firebase", "Gemini API", "Riverpod"],
+        "image": "✈️",
+        "links": [],
+        "color": "from-violet-500 to-purple-500"
+      },
+      {
+        "title": "Blip",
+        "category": "Flutter",
+        "description": "Voice-driven reminder app built with Flutter. Users can create voice notes and set reminders with scheduled notifications and smart timer features.",
+        "technologies": ["Flutter", "Dart", "Riverpod", "Speech-to-Text", "Local Notifications"],
+        "image": "🎙️",
+        "links": [],
+        "color": "from-pink-500 to-rose-500"
+      },
+      {
+        "title": "Bullion",
+        "category": "Flutter",
+        "description": "Flutter-based crypto dashboard app for tracking cryptocurrency markets. Offers real-time price tracking, portfolio management, and market analytics.",
+        "technologies": ["Flutter", "Dart", "Riverpod", "Crypto API", "Charts"],
+        "image": "💰",
+        "links": [],
+        "color": "from-emerald-500 to-cyan-500"
+      },
+      {
+        "title": "Inverse Filtering",
+        "category": "Image Processing",
+        "description": "Implemented inverse filtering and Wiener filtering techniques for image restoration in Python using OpenCV and NumPy.",
+        "technologies": ["Python", "OpenCV", "NumPy", "Image Restoration"],
+        "image": "👁️",
+        "links": [{ "type": "github", "url": "https://github.com/denizzkantarr/inverse_filtering" }],
+        "color": "from-emerald-500 to-green-500"
+      },
+      {
+        "title": "Histogram Project",
+        "category": "Image Processing",
+        "description": "Applied histogram equalization and contrast enhancement techniques with OpenCV.",
+        "technologies": ["Python", "OpenCV", "NumPy", "Matplotlib"],
+        "image": "🔍",
+        "links": [{ "type": "github", "url": "https://github.com/denizzkantarr/histogram_project" }],
+        "color": "from-teal-500 to-cyan-500"
       }
     ]
   },
@@ -278,16 +361,15 @@
     "heroDescription": "Feel free to reach out for your projects or collaboration opportunities!",
     "contactInfo": [
       { "title": "Email", "value": "kantar.deniz.83@gmail.com", "link": "mailto:kantar.deniz.83@gmail.com", "color": "from-primary to-secondary", "icon": "mail" },
-      { "title": "Location", "value": "Ankara, Turkey", "link": "https://www.google.com/maps/place/Ankara", "color": "from-secondary to-primary", "icon": "map" }
+      { "title": "Location", "value": "Ankara, Turkey", "link": "https://www.google.com/maps/place/Ankara", "color": "from-emerald-500 to-teal-500", "icon": "map" }
     ],
-    "aboutTitle": "Let’s Work Together!",
-    "aboutText": "If you need professional solutions for mobile development, web projects, or IoT systems, you’re in the right place. I can bring your projects to life with Flutter, React.js, and modern technologies.",
+    "aboutTitle": "Let's Work Together!",
+    "aboutText": "If you need professional solutions for mobile development, web projects, AI, or image processing, you're in the right place. I can bring your projects to life with Flutter, React.js, Python, and modern technologies.",
     "aboutBullets": ["2+ years professional experience", "Production-ready applications", "Clean code & best practices"],
     "socialTitle": "Social Media",
     "socialView": "View Profile",
     "availabilityTitle": "Availability",
     "availabilityStatus": "Open for new projects",
-    "availabilityText": "I’m available for freelance projects and part-time collaborations. Let’s discuss your project!"
+    "availabilityText": "I'm available for freelance projects and part-time collaborations. Let's discuss your project!"
   }
 }
-

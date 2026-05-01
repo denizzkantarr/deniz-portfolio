@@ -1,111 +1,114 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const socialLinks = [
-    {
-      name: 'LinkedIn',
-      icon: <FaLinkedin />,
-      url: 'https://www.linkedin.com/in/denizkantar/',
-      color: 'hover:text-blue-600',
-    },
-    {
-      name: 'GitHub',
-      icon: <FaGithub />,
-      url: 'https://github.com/denizkant',
-      color: 'hover:text-gray-800',
-    },
-    {
-      name: 'Email',
-      icon: <FaEnvelope />,
-      url: 'mailto:kantar.deniz.83@gmail.com',
-      color: 'hover:text-red-600',
-    },
-    {
-      name: 'Phone',
-      icon: <FaPhone />,
-      url: 'tel:+905340102240',
-      color: 'hover:text-green-600',
-    },
+    { name: 'LinkedIn', icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/denizkantar/' },
+    { name: 'GitHub', icon: <FaGithub />, url: 'https://github.com/denizkant' },
+    { name: 'GitHub 2', icon: <FaGithub />, url: 'https://github.com/denizzkantarr' },
+    { name: 'Email', icon: <FaEnvelope />, url: 'mailto:kantar.deniz.83@gmail.com' },
   ];
 
   const quickLinks = [
-    { label: t('footer.links.home'), href: '/' },
-    { label: t('footer.links.about'), href: '/about' },
-    { label: t('footer.links.projects'), href: '/projects' },
-    { label: t('footer.links.contact'), href: '/contact' },
+    { label: t('footer.links.home'), to: '/' },
+    { label: t('footer.links.about'), to: '/about' },
+    { label: t('nav.experience'), to: '/experience' },
+    { label: t('footer.links.projects'), to: '/projects' },
+    { label: t('footer.links.contact'), to: '/contact' },
   ];
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
   return (
-    <footer className="bg-gradient-to-r from-dark to-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* About Section */}
+    <footer className="footer">
+      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '3.5rem 2rem 2rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2.5rem', marginBottom: '2.5rem' }}>
+          {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Deniz Kantar
-            </h3>
-            <p className="text-gray-400 leading-relaxed">
+            <div className="footer-name">
+              Deniz<span style={{ color: 'var(--accent)' }}>.</span>
+            </div>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '0.75rem' }}>
               {t('footer.role')}
             </p>
-            <p className="text-gray-400 mt-2">
-              {t('footer.location')}
-            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)', fontSize: '0.82rem' }}>
+              <FaMapMarkerAlt style={{ color: 'var(--accent)', flexShrink: 0 }} />
+              <span>{t('footer.location')}</span>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('footer.quickLinks')}</h3>
-            <ul className="space-y-2">
+            <h3 style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>
+              {t('footer.quickLinks')}
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
               {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color var(--transition)' }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
+                  >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Connections */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">{t('footer.connections')}</h3>
-            <div className="flex space-x-4">
+            <h3 style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1rem' }}>
+              {t('footer.connections')}
+            </h3>
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
               {socialLinks.map((link) => (
-                <motion.a
+                <a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
-                  className={`text-2xl text-gray-400 transition-colors ${link.color}`}
+                  title={link.name}
+                  style={{ color: 'var(--text-muted)', fontSize: '1.2rem', transition: 'color var(--transition)' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
                 >
                   {link.icon}
-                </motion.a>
+                </a>
               ))}
             </div>
-            <div className="mt-6">
-              <p className="text-gray-400 text-sm">
-                <FaEnvelope className="inline mr-2" />
-                kantar.deniz.83@gmail.com
-              </p>
-              <p className="text-gray-400 text-sm mt-2">
-                <FaPhone className="inline mr-2" />
-                +90 534 010 2240
-              </p>
-            </div>
+            <a
+              href="mailto:kantar.deniz.83@gmail.com"
+              style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)', fontSize: '0.82rem', textDecoration: 'none', transition: 'color var(--transition)' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--accent)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--text-muted)')}
+            >
+              <FaEnvelope style={{ color: 'var(--accent)' }} />
+              kantar.deniz.83@gmail.com
+            </a>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+        {/* Bottom bar */}
+        <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.78rem' }}>
             {t('footer.rights', { year: new Date().getFullYear() })}
           </p>
+          <button
+            onClick={scrollToTop}
+            style={{ background: 'none', border: '1px solid var(--border)', color: 'var(--text-muted)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', padding: '0.4rem 0.8rem', borderRadius: '6px', transition: 'all var(--transition)' }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--accent)'; e.currentTarget.style.color = 'var(--accent)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.color = 'var(--text-muted)'; }}
+          >
+            <FaArrowUp />
+            {i18n.language === 'tr' ? 'Yukarı Çık' : 'Back to top'}
+          </button>
         </div>
       </div>
     </footer>
